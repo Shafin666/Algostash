@@ -1,2 +1,2 @@
 # Algostash
-Stash of algorithm since I'm too lazy to implement them once again.
+Stash of algorithms and data structures since I'm too lazy to implement them once again.
