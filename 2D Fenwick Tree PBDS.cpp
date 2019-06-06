@@ -26,7 +26,7 @@ struct BinaryIndexedTree {
 		} return ans;
 	}
 
-	int query(int x1, int y1, int x2, int y2) {
+	int query_sub(int x1, int y1, int x2, int y2) {
 		return query(x2, y2) - query(x2, y1-1) - query(x1-1, y2) + query(x1-1, y1-1);
 	}
 } b;
