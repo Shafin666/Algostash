@@ -27,13 +27,13 @@ int dfs(int u, int edge) {
 }
 
 void dfs2(int s) {
-    int currcomp = cmp;
+    int currcmp = cmp;
     Q[cmp].push(s);
     visited[s] = 1;
 
-    while(not Q[cmp].empty()) {
-        int u = Q[cmp].front();
-        Q[cmp].pop();
+    while(not Q[currcmp].empty()) {
+        int u = Q[currcmp].front();
+        Q[currcmp].pop();
 
         for(int i = 0; i < (int) g[u].size(); i++) {
             int e = g[u][i];
@@ -43,12 +43,12 @@ void dfs2(int s) {
 
             if(bridge[e]) {
                 cmp++;
-                adj[currcomp].pb(cmp);
-                adj[cmp].pb(currcomp);
+                adj[currcmp].pb(cmp);
+                adj[cmp].pb(currcmp);
                 dfs2(v);
             }
             else {
-                Q[currcomp].push(v);
+                Q[currcmp].push(v);
                 visited[v] = 1;
             }
         }
