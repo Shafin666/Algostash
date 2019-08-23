@@ -1,3 +1,4 @@
+using matrix = vector<vector<ll>>;
 ll mod;
 
 matrix mul(matrix a, matrix b) {
